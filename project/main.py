@@ -115,7 +115,7 @@ elif (app_mode== "Model Performance"):
     # -------------------------
     # Display accuracy plot
     st.subheader("Training vs Validation Accuracy")
-    st.image("ptoject/accuracy_plot.png", caption="Training vs Validation Accuracy")
+    st.image("project/accuracy_plot.png", caption="Training vs Validation Accuracy")
 
     # -------------------------
     # Display confusion matrix
