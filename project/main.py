@@ -19,11 +19,10 @@ app_mode =st.sidebar.selectbox("Select Page",["Home","About","Model Performance"
 
 #
 if(app_mode=="Home"):
-    st.header("Agricultural Pests Identification") 
+    st.header("# Agricultural Pest Detection Using Machine Learning") 
     image_path="project/opening1.jpg"
     st.image(image_path,use_container_width=True)
     st.markdown("""
-# Agricultural Pest Detection Using Machine Learning
 
 ## Background
 Coming from a country where agriculture is a major occupation, I have seen how pest infestations cause major crop losses and financial hardship for farmers. Many still rely on traditional identification methods or broad pesticides, which are often ineffective and harmful to the environment.
@@ -51,7 +50,7 @@ Upload an image of a pest to see the model’s prediction and learn about its ch
 """)
     
 elif(app_mode == "About"):
-    st.header("About")
+    st.header("#About")
     st.markdown("""
 ## About the Dataset
 
@@ -97,35 +96,35 @@ elif (app_mode== "Model Performance"):
 
     ### Validation Accuracy
     The model achieves **85.70% accuracy** on the validation set.  
-    This means it can correctly classify unseen pest images approximately **XX% of the time**.
+    This means it can correctly classify unseen pest images approximately **85.70% of the time**.
 
     ###  Why Validation Accuracy?
     - Training accuracy shows how well the model fits the training data, but can be overly optimistic due to overfitting.  
     - Validation accuracy provides a **more realistic estimate of real-world performance**, indicating how well the model generalizes to new images.
 
-    ### ⚠️ Note
-    While the model performs well, it should be used as a **first-pass identification tool**. For critical decisions, consult an expert in pest management or agriculture.
+    ### Note
+    While the model performs well, it should be used as a **first-pass identification tool**.
     """)
 
     # -------------------------
     # Load per-class classification report
     st.subheader("Classification Report (Per-Class Metrics)")
-    report_df = pd.read_csv("classification_report.csv", index_col=0)  # Save from notebook using output_dict=True
-    st.dataframe(report_df.style.format("{:.2f}"))
+    report_df = pd.read_csv("project\classification_report.csv", index_col=0)  # Save from notebook using output_dict=True
+    st.dataframe(report_df.style.format("{:.3f}"))
 
     # -------------------------
     # Display accuracy plot
     st.subheader("Training vs Validation Accuracy")
-    st.image("accuracy_plot.png", caption="Training vs Validation Accuracy")
+    st.image("ptoject\accuracy_plot.png", caption="Training vs Validation Accuracy")
 
     # -------------------------
     # Display confusion matrix
     st.subheader("Confusion Matrix")
-    st.image("cm.png", caption="Confusion Matrix")
+    st.image("project\cm.png", caption="Confusion Matrix")
 
     # Explain the confusion matrix
     st.markdown("""
-    ### 🔹 Understanding the Confusion Matrix
+    ### Understanding the Confusion Matrix
 
     - Each **row** represents the **actual class** (true labels).  
     - Each **column** represents the **predicted class** by the model.  
