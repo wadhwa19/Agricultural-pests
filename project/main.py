@@ -19,7 +19,7 @@ app_mode =st.sidebar.selectbox("Select Page",["Home","About","Model Performance"
 
 #
 if(app_mode=="Home"):
-    st.header("# Agricultural Pest Detection Using Machine Learning") 
+    st.header("Agricultural Pest Detection Using Machine Learning") 
     image_path="project/opening1.jpg"
     st.image(image_path,use_container_width=True)
     st.markdown("""
@@ -50,7 +50,7 @@ Upload an image of a pest to see the model’s prediction and learn about its ch
 """)
     
 elif(app_mode == "About"):
-    st.header("#About")
+    st.header("About")
     st.markdown("""
 ## About the Dataset
 
@@ -109,18 +109,18 @@ elif (app_mode== "Model Performance"):
     # -------------------------
     # Load per-class classification report
     st.subheader("Classification Report (Per-Class Metrics)")
-    report_df = pd.read_csv("project\classification_report.csv", index_col=0)  # Save from notebook using output_dict=True
+    report_df = pd.read_csv("project/classification_report.csv", index_col=0)  # Save from notebook using output_dict=True
     st.dataframe(report_df.style.format("{:.3f}"))
 
     # -------------------------
     # Display accuracy plot
     st.subheader("Training vs Validation Accuracy")
-    st.image("ptoject\accuracy_plot.png", caption="Training vs Validation Accuracy")
+    st.image("ptoject/accuracy_plot.png", caption="Training vs Validation Accuracy")
 
     # -------------------------
     # Display confusion matrix
     st.subheader("Confusion Matrix")
-    st.image("project\cm.png", caption="Confusion Matrix")
+    st.image("project/cm.png", caption="Confusion Matrix")
 
     # Explain the confusion matrix
     st.markdown("""
