@@ -5,7 +5,7 @@ import numpy as np
 #Tensorflow Model Prediction
 
 def model_prediction(test_sample):
-    model=tf.keras.models.load_model('efficient_net.keras')
+    model=tf.keras.models.load_model('project/efficient_net.keras')
     image=tf.keras.preprocessing.image.load_img(test_sample,target_size=(128,128))
     input_arr= tf.keras.preprocessing.image.img_to_array(image)
     input_arr= np.array([input_arr])# convert to batch so convert to np array
@@ -19,7 +19,7 @@ app_mode =st.sidebar.selectbox("Select Page",["Home","About","Pest Identificatio
 # 
 if(app_mode=="Home"):
     st.header("Agricultural Pests Identification") 
-    image_path="opening1.jpg"
+    image_path="project/opening1.jpg"
     st.image(image_path,use_container_width=True)
     st.markdown(""" Welcome 
                 ### Yay""")
