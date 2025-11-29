@@ -160,7 +160,7 @@ elif (app_mode== "Pest Identification"):
                         'snail',
                         'wasp',
                         'weevil']
-            st.ballons()
+           
         st.success("Model has predicted this pest as {}".format(class_name[result_index]))
         
        
