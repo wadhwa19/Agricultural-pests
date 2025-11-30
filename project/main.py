@@ -170,7 +170,7 @@ elif (app_mode== "Pest Identification"):
         description = pest_info.get(class_name[result_index].lower(), "No data available.")
 
         # Display
-        st.subheader("Management tips for this pest:")
+        st.subheader(f"Management tips for {class_name[result_index].lower()} :")
         if isinstance(description, list):
             for item in description:
                 st.write("• " + item)
