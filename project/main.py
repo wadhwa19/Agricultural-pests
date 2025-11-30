@@ -166,11 +166,11 @@ elif (app_mode== "Pest Identification"):
                         'weevil']
            
         st.success("Model has predicted this pest as {}".format(class_name[result_index]))
-        
+        pest_name = class_name[result_index].lower()
         description = pest_info.get(class_name[result_index].lower(), "No data available.")
-
+    
         # Display
-        st.subheader(f"Management tips for {class_name[result_index].lower()} :")
+        st.subheader(f"Management tips for {pest_name} :")
         if isinstance(description, list):
             for item in description:
                 st.write("• " + item)
