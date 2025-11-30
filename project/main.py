@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import json 
 
-with open("project/pest_data.json", "r") as f:
+with open("pest_data.json", "r") as f:
     pest_info = json.load(f)
 
 #Tensorflow Model Prediction
