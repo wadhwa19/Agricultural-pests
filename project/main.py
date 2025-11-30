@@ -2,6 +2,10 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 import pandas as pd
+import json 
+
+with open("project/pest_data.json", "r") as f:
+    pest_info = json.load(f)
 
 #Tensorflow Model Prediction
 
@@ -163,6 +167,14 @@ elif (app_mode== "Pest Identification"):
            
         st.success("Model has predicted this pest as {}".format(class_name[result_index]))
         
-       
+        description = pest_info.get(class_name[result_index].lower(), "No data available.")
+
+        # Display
+        st.subheader("Management tips for this pest:")
+        if isinstance(description, list):
+            for item in description:
+                st.write("• " + item)
+        else:
+            st.write(description)
         
         
