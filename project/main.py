@@ -18,7 +18,7 @@ def model_prediction(test_sample):
     result_index= np.argmax(prediction)
     return result_index
 # Sidebar
-st.sidebar.title("Dashboard")
+#st.sidebar.title("Dashboard")
 #app_mode =st.sidebar.selectbox("Select Page",["Home","About","Model Performance","Pest Identification"])
 tab1 , tab2, tab3,tab4 =st.tabs(["Home","About","Model Performance","Pest Identification"])
 #
