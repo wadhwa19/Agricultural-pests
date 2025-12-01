@@ -19,10 +19,11 @@ def model_prediction(test_sample):
     return result_index
 # Sidebar
 st.sidebar.title("Dashboard")
-app_mode =st.sidebar.selectbox("Select Page",["Home","About","Model Performance","Pest Identification"])
-
+#app_mode =st.sidebar.selectbox("Select Page",["Home","About","Model Performance","Pest Identification"])
+tab1 , tab2, tab3,tab4 =st.tabs("Home","About","Model Performance","Pest Identification")
 #
-if(app_mode=="Home"):
+#if(app_mode=="Home"):
+with tab1:
     st.header("Agricultural Pest Detection Using Machine Learning") 
     image_path="project/opening1.jpg"
     st.image(image_path,use_container_width=True)
@@ -53,7 +54,8 @@ By answering these questions, this project aims to develop **reliable and access
 Upload an image of a pest to see the model’s prediction and learn about its characteristics by navigating to the Pest Identification Page in the Dashboard
 """)
     
-elif(app_mode == "About"):
+#elif(app_mode == "About"):
+with tab2:
     st.header("About")
     st.markdown("""
 ## About the Dataset
@@ -93,7 +95,8 @@ By using a balanced, diverse dataset across many pest types, the model aims to g
  
 """)
 
-elif (app_mode== "Model Performance"):
+#elif (app_mode== "Model Performance"):
+with tab3:
     st.header("Model Performance")
     st.markdown("""
     The pest detection model was trained on a dataset of **12 agricultural pests** and evaluated on a **validation set** — a separate portion of images the model had not seen during training.
@@ -142,7 +145,8 @@ elif (app_mode== "Model Performance"):
     """)
     
 
-elif (app_mode== "Pest Identification"):
+#elif (app_mode== "Pest Identification"):
+with tab4:
     st.header("Pest Identification")
     test_image= st.file_uploader("Upload an image:")
     if(st.button("Show Image")):
