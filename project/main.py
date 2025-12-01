@@ -20,7 +20,7 @@ def model_prediction(test_sample):
 # Sidebar
 st.sidebar.title("Dashboard")
 #app_mode =st.sidebar.selectbox("Select Page",["Home","About","Model Performance","Pest Identification"])
-tab1 , tab2, tab3,tab4 =st.tabs("Home","About","Model Performance","Pest Identification")
+tab1 , tab2, tab3,tab4 =st.tabs(["Home","About","Model Performance","Pest Identification"])
 #
 #if(app_mode=="Home"):
 with tab1:
