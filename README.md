@@ -1,4 +1,4 @@
-🐛 Smart Agriculture: Understanding and Identifying agricultural pests
+# 🐛 Smart Agriculture: Understanding and Identifying agricultural pests
 
 Using Deep Learning for Sustainable Farming
 
@@ -74,8 +74,6 @@ Pillow
 Improve accuracy for visually similar species
 
 Add Grad-CAM visual explanations
-
-Extend to bounding-box detection (YOLO/SSD)
 
 Deploy lightweight model for mobile use
 
